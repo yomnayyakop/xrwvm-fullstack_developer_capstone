@@ -1,68 +1,91 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Link the style sheet here -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Best Cars Dealership</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
 </head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
-    <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-      <!-- Insert header information here -->
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
+<body>
+  <div>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: darkturquoise; height: 1in;">
+      <div class="container-fluid">
+        <h2 style="padding-right: 5%;">Dealerships</h2>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" style="font-size: larger;" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" style="font-size: larger;" aria-current="page" href="/about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
-        </div>
+    <!-- Main Content Container -->
+    <div class="card" style="width: 80%; margin: auto; margin-top: 3%; border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      
+      <!-- About Header Banner -->
+      <div class="banner p-4 text-center bg-light rounded" name="about-header">
+        <h1>About Us</h1>
+        <p class="lead mt-3">
+          Welcome to Best Cars dealership, home to the best cars in North America. We deal in selling domestic and imported cars at reasonable prices.
+        </p>
+        <p class="text-muted">
+          Established in 2010, our mission is to provide an unbeatable car-buying experience backed by customer trust, complete vehicle history transparency, and exceptional post-sale support.
+        </p>
       </div>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
+      <!-- Team Members Section -->
+      <h3 class="text-center mt-5 mb-4">Our Leadership Team</h3>
+      
+      <div style="display: flex; flex-direction: row; justify-content: space-around; margin: auto; width: 100%; gap: 20px; padding-bottom: 2rem;">
+        
+        <!-- Person 1 -->
+        <div class="card shadow-sm" style="width: 30%;">
+          <img class="card-img-top" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" alt="John Doe" style="height: 250px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="title mb-1">John Doe</h5>
+            <p class="text-primary fw-bold mb-2">Chief Executive Officer</p>
+            <p class="card-text text-muted">John has over 15 years of experience in the automotive industry. He oversees global dealership operations and customer service excellence.</p>
+            <p class="text-secondary small">john.doe@bestcars.com</p>
+          </div>
         </div>
+
+        <!-- Person 2 -->
+        <div class="card shadow-sm" style="width: 30%;">
+          <img class="card-img-top" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" alt="Jane Smith" style="height: 250px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="title mb-1">Jane Smith</h5>
+            <p class="text-primary fw-bold mb-2">General Sales Manager</p>
+            <p class="card-text text-muted">Jane leads our sales department with a passion for finding the perfect vehicle for every buyer's lifestyle and budget.</p>
+            <p class="text-secondary small">jane.smith@bestcars.com</p>
+          </div>
+        </div>
+
+        <!-- Person 3 -->
+        <div class="card shadow-sm" style="width: 30%;">
+          <img class="card-img-top" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400" alt="Michael Brown" style="height: 250px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="title mb-1">Michael Brown</h5>
+            <p class="text-primary fw-bold mb-2">Head of Service & Parts</p>
+            <p class="card-text text-muted">Michael ensures that every certified pre-owned and new vehicle meets our strict quality and safety inspection standards.</p>
+            <p class="text-secondary small">m.brown@bestcars.com</p>
+          </div>
+        </div>
+
       </div>
     </div>
-    </div>
-    </div>
-    
-</div>
-
+  </div>
+</body>
 </html>

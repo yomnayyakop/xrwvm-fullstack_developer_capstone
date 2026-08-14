@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Best Cars Dealership</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+</head>
+<body>
+  <div>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: darkturquoise; height: 1in;">
+      <div class="container-fluid">
+        <h2 style="padding-right: 5%;">Dealerships</h2>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" style="font-size: larger;" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" style="font-size: larger;" aria-current="page" href="/contact">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="card" style="width: 85%; margin: auto; margin-top: 3%; border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 3rem;">
+      
+      <!-- Contact Header Banner -->
+      <div class="banner p-4 text-center bg-light rounded" name="contact-header">
+        <h1>Contact Us</h1>
+        <p class="lead mt-2">Have questions about a vehicle, pricing, or test drives? We'd love to hear from you!</p>
+      </div>
+
+      <div class="container-fluid p-4">
+        <div class="row g-4">
+          
+          <!-- Left Column: Dealership Contact Information -->
+          <div class="col-lg-5">
+            <div class="card h-100 p-4 border-0 shadow-sm" style="background-color: #f8f9fa;">
+              <h3 class="text-primary mb-4">Get In Touch</h3>
+              
+              <div class="mb-4">
+                <h5>📍 Main Showroom & Address</h5>
+                <p class="text-muted mb-0">1234 Auto Mall Parkway, Suite 500</p>
+                <p class="text-muted">Detroit, MI 48201, USA</p>
+              </div>
+
+              <div class="mb-4">
+                <h5>📞 Phone Numbers</h5>
+                <p class="mb-1"><strong>Sales:</strong> (800) 555-BEST (2378)</p>
+                <p class="mb-1"><strong>Service & Parts:</strong> (800) 555-SERV (7378)</p>
+                <p><strong>Customer Care:</strong> (313) 555-0199</p>
+              </div>
+
+              <div class="mb-4">
+                <h5>✉️ Email Support</h5>
+                <p class="mb-1"><strong>Sales Info:</strong> <a href="mailto:sales@bestcars.com">sales@bestcars.com</a></p>
+                <p><strong>General Support:</strong> <a href="mailto:support@bestcars.com">support@bestcars.com</a></p>
+              </div>
+
+              <div>
+                <h5>🕒 Hours of Operation</h5>
+                <table class="table table-sm text-muted">
+                  <tbody>
+                    <tr>
+                      <td>Monday - Friday:</td>
+                      <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Saturday:</td>
+                      <td>9:00 AM - 6:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Sunday:</td>
+                      <td>Closed</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="col-lg-7">
+            <div class="card h-100 p-4 border-0 shadow-sm">
+              <h3 class="mb-3">Send Us a Message</h3>
+              <p class="text-muted mb-4">Fill out the form below and one of our dealership representatives will reach out to you within 24 hours.</p>
+
+              <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent successfully.');">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-class form-control" id="firstName" placeholder="John" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Doe" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="john.doe@example.com" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="(555) 000-0000">
+                  </div>
+                  <div class="col-12">
+                    <label for="subject" class="form-label">Inquiry Type</label>
+                    <select class="form-select" id="subject">
+                      <option selected>General Inquiry</option>
+                      <option value="sales">Vehicle Purchasing / Pricing</option>
+                      <option value="testdrive">Schedule a Test Drive</option>
+                      <option value="service">Service & Repair</option>
+                      <option value="financing">Financing Options</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="message" class="form-label">Your Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="How can we help you today?" required></textarea>
+                  </div>
+                  <div class="col-12 mt-4">
+                    <button type="submit" class="btn btn-info text-white btn-lg w-100" style="background-color: darkturquoise; border: none;">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

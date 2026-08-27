@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
@@ -26,7 +26,6 @@ jobs:
         working-directory: server
         run: |
           find . -name "*.py" -print0 | xargs -0 flake8
-          echo "Python linting completed successfully"
 
   lint_js:
     runs-on: ubuntu-latest
@@ -36,15 +35,16 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: Install JSHint
         run: npm install jshint
 
       - name: Run JavaScript linting
-        working-directory: server
         run: |
-          find . -path "*/database/*" -name "*.js" -print0 | xargs -0 ./node_modules/.bin/jshint
-          echo "JavaScript linting completed successfully"
+          find server/database -name "*.js" -print0 | xargs -0 ./node_modules/.bin/jshint
+
+      - name: Linting completed
+        run: echo "JavaScript linting completed successfully"

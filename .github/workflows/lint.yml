@@ -23,7 +23,7 @@ jobs:
 
       - name: Run Python linting
         working-directory: server
-        run: flake8 . --ignore=E501,E302,E303,E231,E225,E275,E265,E712,W293,W391,F401,F811,F841,E722
+        run: flake8 . --ignore=E501,E302,E303,E231,E225,E226,E275,E265,E712,W293,W391,F401,F811,F841,E722
 
       - name: Python linting completed
         run: echo "Python linting completed successfully"

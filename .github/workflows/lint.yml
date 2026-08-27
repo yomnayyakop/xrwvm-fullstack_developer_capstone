@@ -40,6 +40,7 @@ jobs:
           node-version: "18"
 
       - name: Install JSHint
+        working-directory: server
         run: npm install jshint
 
       - name: Run JavaScript linting
